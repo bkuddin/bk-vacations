@@ -4,11 +4,15 @@ import { useForm } from "react-hook-form";
 import "./AddVacations.css";
 
 const AddVacations = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
     axios.post("http://localhost:5000/vacations", data).then((res) => {
       console.log(res);
+      if (res.data.insertedId) {
+        alert("Data added, Successfully!");
+        reset();
+      }
     });
   };
   return (
@@ -23,6 +27,7 @@ const AddVacations = () => {
           placeholder="Title"
         />
         <textarea {...register("details")} placeholder="details" />
+
         <input type="number" {...register("price")} placeholder="price" />
 
         <input {...register("imgTitle")} placeholder="Title Image" />
