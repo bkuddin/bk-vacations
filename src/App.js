@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import AddVacations from "./components/AddVacations/AddVacations";
 import Header from "./components/Shared/Header/Header";
 import Deals from "./Pages/Deals/Deals";
 import Home from "./Pages/Home/Home";
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/trips">
             <Trips></Trips>
+          </Route>
+          <Route path="/add-vacations">
+            <AddVacations></AddVacations>
           </Route>
           <Route path="*">
             <Notfound></Notfound>

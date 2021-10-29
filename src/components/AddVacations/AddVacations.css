@@ -1,0 +1,19 @@
+.add-vacation form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: #ffb192;
+}
+
+.add-vacation form,
+input,
+textarea {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: none;
+  border: 2px solid white;
+  border-radius: 3px;
+}
