@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./DisplayVactions.css";
 
 const DisplayVacations = ({ vacation }) => {
-  const { location, imgTitle, img, price, title } = vacation;
+  const { _id, location, imgTitle, img, price, title } = vacation;
   return (
     <div>
       <Col>
@@ -44,7 +44,7 @@ const DisplayVacations = ({ vacation }) => {
                 {" "}
                 ${price}
               </span>
-              <Link>
+              <Link to={`/booking/${_id}`}>
                 <button className="bk-button">Booking</button>
               </Link>
             </span>

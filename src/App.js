@@ -4,6 +4,7 @@ import AddVacations from "./components/AddVacations/AddVacations";
 import Footer from "./components/Shared/Footer/Footer";
 import Header from "./components/Shared/Header/Header";
 import Blog from "./Pages/Blog/Blog";
+import Booking from "./Pages/Booking/Booking";
 import Deals from "./Pages/Deals/Deals";
 import Home from "./Pages/Home/Home";
 import MobileApp from "./Pages/MobileApp/MobileApp";
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path="/mobile-app">
             <MobileApp></MobileApp>
+          </Route>
+          <Route path="/booking/:bookingId">
+            <Booking></Booking>
           </Route>
           <Route path="*">
             <Notfound></Notfound>
