@@ -5,6 +5,7 @@ import Header from "./components/Shared/Header/Header";
 import Blog from "./Pages/Blog/Blog";
 import Deals from "./Pages/Deals/Deals";
 import Home from "./Pages/Home/Home";
+import MobileApp from "./Pages/MobileApp/MobileApp";
 import Notfound from "./Pages/Notfound/Notfound";
 import Trips from "./Pages/Trips/Trips";
 
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/blog">
             <Blog></Blog>
+          </Route>
+          <Route path="/mobile-app">
+            <MobileApp></MobileApp>
           </Route>
           <Route path="*">
             <Notfound></Notfound>

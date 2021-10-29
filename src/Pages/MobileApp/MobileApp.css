@@ -1,0 +1,18 @@
+.mobile-app {
+  background-color: #ffb191;
+
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.mobile-app .bk-button {
+  margin-top: 40%;
+}
+
+.phone-input {
+  padding: 5%;
+}
+
+.phone-input input:focus {
+  outline: none !important;
+}

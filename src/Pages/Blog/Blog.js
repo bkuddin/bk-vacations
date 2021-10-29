@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
-    <div>
+    <div style={{ marginTop: "8%", marginBottom: "8%" }}>
       <Container>
         <Row>
           <Col sm>
