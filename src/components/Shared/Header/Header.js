@@ -1,17 +1,26 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="/home">BK VACATIONS</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
+            BK VACATIONS
+          </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/deals">Deals</Nav.Link>
-            <Nav.Link href="/trips">Trips</Nav.Link>
+            <Nav.Link as={Link} to="/home">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/deals">
+              Deals
+            </Nav.Link>
+            <Nav.Link as={Link} to="/trips">
+              Trips
+            </Nav.Link>
 
             <Navbar.Text>
               Signed in as: <a href="#login">Mark Otto</a>
