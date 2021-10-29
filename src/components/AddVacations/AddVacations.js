@@ -18,8 +18,13 @@ const AddVacations = () => {
           {...register("location", { required: true, maxLength: 40 })}
           placeholder="Location"
         />
+        <input
+          {...register("title", { required: true, maxLength: 60 })}
+          placeholder="Title"
+        />
         <textarea {...register("details")} placeholder="details" />
         <input type="number" {...register("price")} placeholder="price" />
+
         <input {...register("imgTitle")} placeholder="Title Image" />
 
         <input {...register("img")} placeholder="image url" />
