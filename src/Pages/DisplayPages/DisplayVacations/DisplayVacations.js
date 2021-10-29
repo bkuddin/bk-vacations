@@ -4,19 +4,31 @@ import { Link } from "react-router-dom";
 import "./DisplayVactions.css";
 
 const DisplayVacations = ({ vacation }) => {
-  const { location, imgTitle, img, price } = vacation;
+  const { location, imgTitle, img, price, title } = vacation;
   return (
     <div>
       <Col>
         <Card>
-          <Card.Img variant="top" src={imgTitle} />
+          <Card.Img
+            variant="top"
+            src={imgTitle}
+            style={{ width: "80%", margin: "0 auto" }}
+          />
           <Card.Body>
             <Card.Title>{location}</Card.Title>
             <Card.Img variant="top" src={img} />
             <Card.Text
               style={{
+                marginTop: "5%",
+                borderRadius: "15px",
+              }}
+            >
+              <p>{title}</p>
+            </Card.Text>
+            <span
+              style={{
                 backgroundColor: "#FFB192",
-                padding: "5%",
+                padding: "8%",
                 marginTop: "5%",
                 borderRadius: "15px",
               }}
@@ -35,7 +47,7 @@ const DisplayVacations = ({ vacation }) => {
               <Link>
                 <button className="bk-button">Booking</button>
               </Link>
-            </Card.Text>
+            </span>
           </Card.Body>
         </Card>
       </Col>
