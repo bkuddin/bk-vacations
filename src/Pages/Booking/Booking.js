@@ -9,6 +9,7 @@ const Booking = () => {
   const { bookingId } = useParams();
   const { user } = useAuth();
   const [vacation, setVacation] = useState({});
+
   useEffect(() => {
     fetch(`https://fierce-fjord-19214.herokuapp.com/vacations/${bookingId}`)
       .then((res) => res.json())
@@ -24,6 +25,8 @@ const Booking = () => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
+    }).then(() => {
+      alert("Booking Completed, Check My Booking");
     });
   };
 
@@ -40,9 +43,9 @@ const Booking = () => {
 
             <button
               onClick={() => handleAddToCart(bookingId)}
-              className="btn btn-warning"
+              className="bk-button"
             >
-              Buy Now
+              Booking Now
             </button>
           </Col>
         </Row>

@@ -15,6 +15,7 @@ import Home from "./Pages/Home/Home";
 import MobileApp from "./Pages/MobileApp/MobileApp";
 import Notfound from "./Pages/Notfound/Notfound";
 import Trips from "./Pages/Trips/Trips";
+import UpdateBooking from "./Pages/UpdateBooking/UpdateBooking";
 import UserManageBooking from "./Pages/UserManageBooking/UserManageBooking";
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
             </Route>
             <Route path="/my-booking">
               <UserManageBooking></UserManageBooking>
+            </Route>
+            <Route path="/update-booking">
+              <UpdateBooking></UpdateBooking>
             </Route>
             <Route path="*">
               <Notfound></Notfound>

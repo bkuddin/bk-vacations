@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import useAuth from "../../contexts/useAuth";
 import "./UserManageBooking.css";
 
@@ -40,6 +41,7 @@ const UserManageBooking = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.deletedCount) {
+          alert("Are you sure you want to permanently avoid this journey?");
           setIsDeleted(true);
         } else {
           setIsDeleted(false);
@@ -98,7 +100,10 @@ const UserManageBooking = () => {
                         Delete
                       </button>
                       <br />
-                      <button className="bk-button">Updated</button> <br />
+                      <Link to={`/update-booking/${booking._id}`}>
+                        <button className="bk-button">Updated</button>
+                      </Link>{" "}
+                      <br />
                     </Card>
                   </Col>
                 </div>
