@@ -10,7 +10,7 @@ const UpdateVacations = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
-    fetch(`http://localhost:5000/vacations/${vacationId}`, {
+    fetch(`https://fierce-fjord-19214.herokuapp.com/vacations/${vacationId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -25,7 +25,7 @@ const UpdateVacations = () => {
   };
   // React Hook end
 
-  fetch(`http://localhost:5000/vacations/${vacationId}`)
+  fetch(`https://fierce-fjord-19214.herokuapp.com/vacations/${vacationId}`)
     .then((res) => res.json())
     .then((data) => setVacation(data));
   return (

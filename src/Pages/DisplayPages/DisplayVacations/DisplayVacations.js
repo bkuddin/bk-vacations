@@ -11,7 +11,7 @@ const DisplayVacations = ({ vacation }) => {
   const [vacations, setVacations] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/vacations")
+    fetch("https://fierce-fjord-19214.herokuapp.com/vacations")
       .then((res) => res.json())
       .then((data) => setVacations(data));
   }, []);
@@ -19,7 +19,7 @@ const DisplayVacations = ({ vacation }) => {
   const handleAddToCart = (index) => {
     const data = vacations[index];
     data.email = "bkUddin@gmail.com";
-    fetch("http://localhost:5000/packages", {
+    fetch("https://fierce-fjord-19214.herokuapp.com/packages", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

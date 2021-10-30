@@ -5,7 +5,7 @@ import DisplayVacations from "../DisplayPages/DisplayVacations/DisplayVacations"
 const Vacations = () => {
   const [vacations, SetVacations] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/vacations")
+    fetch("https://fierce-fjord-19214.herokuapp.com/vacations")
       .then((res) => res.json())
       .then((data) => SetVacations(data));
   }, []);

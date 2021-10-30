@@ -6,14 +6,14 @@ const ManageVacations = () => {
   const [vacations, setVacations] = useState([]);
   const [isDeleted, setIsDeleted] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/vacations")
+    fetch("https://fierce-fjord-19214.herokuapp.com/vacations")
       .then((res) => res.json())
       .then((data) => setVacations(data));
   }, [isDeleted]);
 
   //   Handle Delete Button
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/vacations/${id}`, {
+    fetch(`https://fierce-fjord-19214.herokuapp.com/vacations/${id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     })
@@ -32,7 +32,7 @@ const ManageVacations = () => {
   const handleAddToCart = (index) => {
     const data = vacations[index];
     data.email = "bkUddin@gmail.com";
-    fetch("http://localhost:5000/packages", {
+    fetch("https://fierce-fjord-19214.herokuapp.com/packages", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

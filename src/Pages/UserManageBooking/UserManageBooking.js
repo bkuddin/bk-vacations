@@ -12,7 +12,7 @@ const UserManageBooking = () => {
 
   //   User Manage
   useEffect(() => {
-    fetch(`http://localhost:5000/packages/${email}`)
+    fetch(`https://fierce-fjord-19214.herokuapp.com/packages/${email}`)
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);

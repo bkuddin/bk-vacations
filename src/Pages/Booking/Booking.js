@@ -10,7 +10,7 @@ const Booking = () => {
   const { user } = useAuth();
   const [vacation, setVacation] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/vacations/${bookingId}`)
+    fetch(`https://fierce-fjord-19214.herokuapp.com/vacations/${bookingId}`)
       .then((res) => res.json())
       .then((data) => setVacation(data));
   }, []);
@@ -20,7 +20,7 @@ const Booking = () => {
   const handleAddToCart = () => {
     const data = vacation;
     data.email = `${user.email}`;
-    fetch("http://localhost:5000/packages", {
+    fetch("https://fierce-fjord-19214.herokuapp.com/packages", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

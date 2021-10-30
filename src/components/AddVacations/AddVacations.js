@@ -7,13 +7,15 @@ const AddVacations = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/vacations", data).then((res) => {
-      console.log(res);
-      if (res.data.insertedId) {
-        alert("Data added, Successfully!");
-        reset();
-      }
-    });
+    axios
+      .post("https://fierce-fjord-19214.herokuapp.com/vacations", data)
+      .then((res) => {
+        console.log(res);
+        if (res.data.insertedId) {
+          alert("Data added, Successfully!");
+          reset();
+        }
+      });
   };
   return (
     <div className="add-vacation">
