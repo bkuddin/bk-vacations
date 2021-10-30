@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./DisplayVactions.css";
 
 const DisplayVacations = ({ vacation }) => {
   const { _id, location, imgTitle, img, price, title } = vacation;
+
+  // ---------For booking post Start ()
+
+  const [vacations, setVacations] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/vacations")
+      .then((res) => res.json())
+      .then((data) => setVacations(data));
+  }, []);
+  //   Handle Add to Cart (Buy now Button)
+  const handleAddToCart = (index) => {
+    const data = vacations[index];
+    data.email = "bkUddin@gmail.com";
+    fetch("http://localhost:5000/packages", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    });
+  };
+
+  // ---------For booking post End ()
   return (
     <div>
       <Col>
@@ -45,7 +67,7 @@ const DisplayVacations = ({ vacation }) => {
                 ${price}
               </span>
               <Link to={`/booking/${_id}`}>
-                <button className="bk-button">Booking</button>
+                <button className="bk-button">Check</button>
               </Link>
             </span>
           </Card.Body>

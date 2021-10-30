@@ -23,6 +23,9 @@ const Header = () => {
             <Nav.Link as={Link} to="/trips">
               Trips
             </Nav.Link>
+            <Nav.Link as={Link} to="/my-booking">
+              My Booking
+            </Nav.Link>
 
             {user?.email ? (
               <button className="bk-btn" onClick={logOut}>

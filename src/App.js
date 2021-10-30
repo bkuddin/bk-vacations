@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AddVacations from "./components/AddVacations/AddVacations";
 import Login from "./components/Login/Login";
+import ManageVacations from "./components/ManageVacations/ManageVacations";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Shared/Footer/Footer";
 import Header from "./components/Shared/Header/Header";
+import UpdateVacations from "./components/UpdateVacations/UpdateVacations";
 import AuthProvider from "./contexts/AuthProvider";
 import Blog from "./Pages/Blog/Blog";
 import Booking from "./Pages/Booking/Booking";
@@ -13,6 +15,7 @@ import Home from "./Pages/Home/Home";
 import MobileApp from "./Pages/MobileApp/MobileApp";
 import Notfound from "./Pages/Notfound/Notfound";
 import Trips from "./Pages/Trips/Trips";
+import UserManageBooking from "./Pages/UserManageBooking/UserManageBooking";
 
 function App() {
   return (
@@ -36,6 +39,12 @@ function App() {
             <Route path="/add-vacations">
               <AddVacations></AddVacations>
             </Route>
+            <Route path="/manage-vacations">
+              <ManageVacations></ManageVacations>
+            </Route>
+            <Route path="/update-vacations/:vacationId">
+              <UpdateVacations></UpdateVacations>
+            </Route>
             <Route path="/blog">
               <Blog></Blog>
             </Route>
@@ -47,6 +56,9 @@ function App() {
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/my-booking">
+              <UserManageBooking></UserManageBooking>
             </Route>
             <Route path="*">
               <Notfound></Notfound>
