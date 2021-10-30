@@ -7,6 +7,7 @@ import "./UserManageBooking.css";
 const UserManageBooking = () => {
   const { user } = useAuth();
   const [bookings, setBookings] = useState([]);
+  const [isDeleted, setIsDeleted] = useState(false);
 
   const email = `${user.email}`;
 
@@ -15,7 +16,7 @@ const UserManageBooking = () => {
     fetch(`https://fierce-fjord-19214.herokuapp.com/packages/${email}`)
       .then((res) => res.json())
       .then((data) => setBookings(data));
-  }, []);
+  }, [isDeleted]);
 
   console.log(bookings);
 
@@ -29,6 +30,23 @@ const UserManageBooking = () => {
   const onSubmit = (data) => console.log(data);
 
   ///   React Hook end
+
+  //   Handle Delete Button
+  const handleDelete = (id) => {
+    fetch(`https://fierce-fjord-19214.herokuapp.com/packages/${id}`, {
+      method: "DELETE",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.deletedCount) {
+          setIsDeleted(true);
+        } else {
+          setIsDeleted(false);
+        }
+      });
+    console.log(id);
+  };
   return (
     <div>
       <Container>
@@ -73,7 +91,13 @@ const UserManageBooking = () => {
                           <h5>{booking.location}</h5>
                         </Card.Text>
                       </Card.Body>
-                      <button className="btn btn-danger">Delete</button> <br />
+                      <button
+                        onClick={() => handleDelete(booking._id)}
+                        className="btn btn-danger"
+                      >
+                        Delete
+                      </button>
+                      <br />
                       <button className="bk-button">Updated</button> <br />
                     </Card>
                   </Col>

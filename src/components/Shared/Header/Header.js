@@ -28,7 +28,7 @@ const Header = () => {
             </Nav.Link>
 
             {user?.email ? (
-              <button className="bk-btn" onClick={logOut}>
+              <button className="bk-button mx-3" onClick={logOut}>
                 Log Out
               </button>
             ) : (
