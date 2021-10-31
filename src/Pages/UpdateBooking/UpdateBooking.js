@@ -33,7 +33,7 @@ const UpdateBooking = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("location", { required: true, maxLength: 40 })}
-          placeholder="Location"
+          placeholder={booking.location}
         />
         <input
           {...register("title", { required: true, maxLength: 60 })}

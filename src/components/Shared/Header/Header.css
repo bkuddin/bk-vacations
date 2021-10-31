@@ -6,12 +6,15 @@
   padding-bottom: 6% !important;
 }
 
-.button-admin .bk-button {
+.button-my-Booking .bk-button {
   background-color: #333;
+  color: white;
 }
 
 .nav-style {
   color: #333;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .nav-style:hover {

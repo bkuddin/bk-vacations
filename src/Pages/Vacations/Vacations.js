@@ -11,6 +11,7 @@ const Vacations = () => {
   }, []);
   return (
     <div>
+      <h2 style={{ textAlign: "center", marginTop: "20px" }}>Vacations</h2>
       <Row xs={1} md={4} className="g-4 mx-5 my-5">
         {vacations.map((vacation) => (
           <DisplayVacations
