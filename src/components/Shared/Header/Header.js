@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import Logo from "../../../images/bk-vacations-logo-black.png";
 
 const Header = () => {
   const { user, logOut } = useAuth();
+
   return (
     <>
       <Navbar
@@ -17,7 +18,7 @@ const Header = () => {
         variant="light"
       >
         <Container>
-          <Navbar.Brand as={Link} to="/" className="logo">
+          <Navbar.Brand as={Link} to="/" className="logo nav-link">
             <img style={{ width: "20%" }} src={Logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -31,9 +32,18 @@ const Header = () => {
             <Nav.Link as={Link} to="/my-booking">
               My Booking
             </Nav.Link>
-            <Nav.Link as={Link} to="/add-package">
-              Add Package
-            </Nav.Link>
+
+            <div className="button-admin">
+              <button className="bk-button">
+                <Nav.Link
+                  style={{ color: "white" }}
+                  as={Link}
+                  to="/add-package"
+                >
+                  Add Package
+                </Nav.Link>
+              </button>
+            </div>
 
             {user?.email ? (
               <button className="bk-button mx-3" onClick={logOut}>

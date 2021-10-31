@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# BK VACATIONS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For nearly four months, BK Vacations has been fulfilling vacation fantasies. At BK, we are dedicated to designing holidays that far surpass your expectations and offering the most extraordinary end-to-end experience possible. The experiences and memories you create on a BK trip define us, and it is our goal to present you with the opportunity to experience something unique.
 
-## Available Scripts
+## live site
 
-In the project directory, you can run:
+https://bk-vacations.web.app/
 
-### `npm start`
+## Bullet points
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- The design principles of React.
+- Since I'm building this web, I'm using react-bootstrap (sometimes vanilla CSS), and react-router-dom in this site. ... Switch, Route, Link } from "react-router-dom";
+- Built a Simple CRUD App with Node, Express, and MongoDB
+- I'm running my Heroku as a server so I can access the database with no problem.
+- Full Responsive Design
+- I have used Firebase Authentication to enable users to authenticate with Firebase using their gmail.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Secured Login System
+- Manage All Bookings (User)
+- Add A New Package (Admin)
+- Fullscreen mode
+- Cross platform
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built with At a Glance
 
-### `npm run build`
+- React.js
+- React Bootstrap
+- Mongodb
+- Heroku
+- CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Client:** React, React Bootstrap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Server:** Heroku
 
-### `npm run eject`
+## Usage/Examples
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+import Component from 'my-project'
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function App() {
+return <Component />
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
