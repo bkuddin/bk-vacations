@@ -24,7 +24,7 @@ const ManageAllBookings = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.deletedCount) {
-          alert("Are you sure you want to permanently avoid this journey?");
+          alert("Are you sure you want to permanently cancel this package?");
           setIsDeleted(true);
         } else {
           setIsDeleted(false);
