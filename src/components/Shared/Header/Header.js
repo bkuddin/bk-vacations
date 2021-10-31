@@ -1,7 +1,9 @@
 import React from "react";
+import "./Header.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../contexts/useAuth";
+import Logo from "../../../images/bk-vacations-logo-black.png";
 
 const Header = () => {
   const { user, logOut } = useAuth();
@@ -9,8 +11,8 @@ const Header = () => {
     <>
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand as={Link} to="/">
-            BK VACATIONS
+          <Navbar.Brand as={Link} to="/" className="logo">
+            <img style={{ width: "20%" }} src={Logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
