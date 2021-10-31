@@ -1,7 +1,7 @@
 import "./Header.css";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+
 import useAuth from "../../../contexts/useAuth";
 import Logo from "../../../images/bk-vacations-logo-black.png";
 
@@ -19,15 +19,15 @@ const Header = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand as={Link} to="/home" className="logo nav-link">
+          <Navbar.Brand as={Link} to="/" className="logo nav-link">
             <img style={{ width: "20%" }} src={Logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Nav.Link className="nav-style" as={HashLink} to="/home#home">
+            <Nav.Link className="nav-style" as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link className="nav-style" as={HashLink} to="/home#vacations">
+            <Nav.Link className="nav-style" as={Link} to="/vacations">
               Vacations
             </Nav.Link>
             <div className="button-my-Booking">
