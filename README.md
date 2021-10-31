@@ -4,7 +4,7 @@ For nearly four months, BK Vacations has been fulfilling vacation fantasies. At 
 
 ## live site
 
-https://bk-vacations.web.app/
+https://bk-vacations.netlify.app/
 
 ## Bullet points
 
