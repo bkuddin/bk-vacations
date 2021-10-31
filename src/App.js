@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AddVacations from "./components/AddVacations/AddVacations";
 import Login from "./components/Login/Login";
+import ManageAllBookings from "./components/ManageAllBookings/ManageAllBookings";
 import ManageVacations from "./components/ManageVacations/ManageVacations";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Shared/Footer/Footer";
@@ -15,6 +16,7 @@ import Home from "./Pages/Home/Home";
 import MobileApp from "./Pages/MobileApp/MobileApp";
 import Notfound from "./Pages/Notfound/Notfound";
 import Trips from "./Pages/Trips/Trips";
+import UpdateBooking from "./Pages/UpdateBooking/UpdateBooking";
 import UserManageBooking from "./Pages/UserManageBooking/UserManageBooking";
 import Vacations from "./Pages/Vacations/Vacations";
 
@@ -66,6 +68,12 @@ function App() {
             </Route>
             <Route path="/add-package">
               <AddVacations></AddVacations>
+            </Route>
+            <Route path="/manage-bookings">
+              <ManageAllBookings></ManageAllBookings>
+            </Route>
+            <Route path="/update-booking/:updateId">
+              <UpdateBooking></UpdateBooking>
             </Route>
             <Route path="*">
               <Notfound></Notfound>
