@@ -34,10 +34,10 @@ const Booking = () => {
     <div>
       <Container>
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <img src={vacation.img} style={{ width: "100%" }} alt="" />
           </Col>
-          <Col>
+          <Col sm={12} md={6}>
             <h3>{vacation.title}</h3>
             <p style={{ margin: "5%" }}>{vacation.details}</p>
 

@@ -12,7 +12,7 @@ const UserManageBooking = () => {
 
   const email = `${user.email}`;
 
-  //   User Manage
+  //   Get Data from Specific user via email
   useEffect(() => {
     fetch(`https://fierce-fjord-19214.herokuapp.com/packages/${email}`)
       .then((res) => res.json())
@@ -28,7 +28,21 @@ const UserManageBooking = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    fetch("https://fierce-fjord-19214.herokuapp.com/addresses", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          alert("Successfully Added");
+          reset();
+        }
+      });
+  };
 
   ///   React Hook end
 
@@ -53,7 +67,7 @@ const UserManageBooking = () => {
     <div>
       <Container>
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
               <input defaultValue={user.displayName} {...register("name")} />
 
@@ -79,36 +93,37 @@ const UserManageBooking = () => {
               <input type="submit" />
             </form>
           </Col>
-          <Col>
-            <Row xs={1} md={3} className="g-4 mx-5 my-5">
+          <Col sm={12} md={6}>
+            <div>
               {bookings.map((booking) => (
-                <div>
-                  <Col>
-                    <Card>
-                      <Card.Img variant="top" src={booking.imgTitle} />
-                      <Card.Img variant="top" src={booking.img} />
-                      <Card.Body>
-                        <Card.Title>{booking.title}</Card.Title>
-                        <Card.Text>
-                          <h5>{booking.location}</h5>
-                        </Card.Text>
-                      </Card.Body>
-                      <button
-                        onClick={() => handleDelete(booking._id)}
-                        className="btn btn-danger"
-                      >
-                        Delete
-                      </button>
-                      <br />
-                      <Link to={`/update-booking/${booking._id}`}>
-                        <button className="bk-button">Updated</button>
-                      </Link>{" "}
-                      <br />
-                    </Card>
-                  </Col>
+                <div className="booking-list">
+                  <div className="img">
+                    <img src={booking.img} alt="" />
+                  </div>
+                  {/* <div className="title">
+                    <h4>{booking.title}</h4>
+                  </div> */}
+                  <div className="location">
+                    <h4>{booking.location}</h4>
+                  </div>
+
+                  <div className="button">
+                    <button
+                      onClick={() => handleDelete(booking._id)}
+                      className="btn btn-danger"
+                    >
+                      Delete
+                    </button>
+                  </div>
+
+                  <div className="button">
+                    <Link to="/vacations">
+                      <button className="bk-button">Add New</button>
+                    </Link>
+                  </div>
                 </div>
               ))}
-            </Row>
+            </div>
           </Col>
         </Row>
       </Container>

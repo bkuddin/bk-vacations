@@ -12,3 +12,51 @@
 .error {
   color: red;
 }
+
+.booking-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+}
+
+.location {
+  width: 200px;
+}
+.button {
+  margin-left: 2%;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 688px) {
+  .booking-list {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 10%; */
+  }
+
+  .img,
+  .location,
+  .button {
+    margin-top: 5%;
+  }
+
+  .booking-form input {
+    display: block;
+    margin-top: 5%;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .booking-form {
+    margin: 0px 0px;
+  }
+}
