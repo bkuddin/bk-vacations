@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Logo from "../../../images/bk-vacations-logo-black.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,9 @@ const Footer = () => {
       <Container>
         <Row>
           <Col sm={6}>
-            <h3 style={{ textAlign: "left" }}>BK VACATIONS</h3>
+            <h3 style={{ textAlign: "left" }}>
+              <img src={Logo} alt="" style={{ width: "30%" }} />
+            </h3>
             <p style={{ textAlign: "left" }}>
               For nearly four months, BK Vacations has been fulfilling vacation
               fantasies. At BK, we are dedicated to designing holidays that far
