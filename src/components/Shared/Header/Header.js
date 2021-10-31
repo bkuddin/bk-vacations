@@ -25,14 +25,14 @@ const Header = () => {
             <Nav.Link as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/deals">
-              Deals
-            </Nav.Link>
             <Nav.Link as={Link} to="/trips">
               Trips
             </Nav.Link>
             <Nav.Link as={Link} to="/my-booking">
               My Booking
+            </Nav.Link>
+            <Nav.Link as={Link} to="/add-package">
+              Add Package
             </Nav.Link>
 
             {user?.email ? (

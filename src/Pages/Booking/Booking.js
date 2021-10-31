@@ -21,6 +21,7 @@ const Booking = () => {
   const handleAddToCart = () => {
     const data = vacation;
     data.email = `${user.email}`;
+    data.status = "Pending";
     fetch("https://fierce-fjord-19214.herokuapp.com/packages", {
       method: "POST",
       headers: { "content-type": "application/json" },

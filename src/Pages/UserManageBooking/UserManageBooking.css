@@ -1,3 +1,8 @@
+.booking {
+  background-color: #ffb192;
+  border-radius: 8px;
+}
+
 .booking-form {
   margin: 30px 150px;
 }
@@ -5,12 +10,29 @@
   display: block;
   margin-top: 30px;
   padding: 5px;
-  border: 1px solid gray;
+  border: none !important;
+  border: 1px solid #ffb192;
   border-radius: 5px;
   width: 300px;
 }
+
+.booking-form input:focus {
+  outline: none !important;
+  outline: 2px solid #f18f68 !important;
+}
+
+.booking-input-button {
+  width: 90%;
+}
 .error {
   color: red;
+}
+
+.booking-tite {
+  background-color: #ffb192;
+  padding: 2%;
+  border-radius: 8px;
+  color: white;
 }
 
 .booking-list {
@@ -29,12 +51,24 @@
   width: 200px;
 }
 .button {
-  margin-left: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
+.button-pending .bk-button {
+  background-color: #ffb192;
+  color: white;
+}
+.button-delete .bk-button {
+  background-color: #f80303;
+  color: white;
+}
 /* Responsive Design */
 
 @media only screen and (max-width: 688px) {
+  .booking {
+    padding-bottom: 10%;
+  }
   .booking-list {
     display: flex;
     flex-direction: column;
@@ -58,5 +92,13 @@
 
   .booking-form {
     margin: 0px 0px;
+  }
+
+  .booking-input-button {
+    width: 60%;
+  }
+
+  .booking-tite {
+    margin-top: 30px;
   }
 }

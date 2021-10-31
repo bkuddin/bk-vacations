@@ -38,7 +38,7 @@ const UserManageBooking = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          alert("Successfully Added");
+          alert("Booked, Successfully");
           reset();
         }
       });
@@ -67,7 +67,7 @@ const UserManageBooking = () => {
     <div>
       <Container>
         <Row>
-          <Col sm={12} md={6}>
+          <Col className="booking" sm={12} md={6}>
             <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
               <input defaultValue={user.displayName} {...register("name")} />
 
@@ -90,11 +90,20 @@ const UserManageBooking = () => {
                 {...register("phone")}
               />
 
-              <input type="submit" />
+              <button className="bk-button booking-input-button">
+                <input
+                  style={{
+                    marginTop: "7px",
+                    backgroundColor: "none",
+                  }}
+                  type="submit"
+                />
+              </button>
             </form>
           </Col>
           <Col sm={12} md={6}>
             <div>
+              <h2 className="booking-tite">My Booking List</h2>
               {bookings.map((booking) => (
                 <div className="booking-list">
                   <div className="img">
@@ -107,10 +116,18 @@ const UserManageBooking = () => {
                     <h4>{booking.location}</h4>
                   </div>
 
-                  <div className="button">
+                  <div className="button-pending button">
                     <button
                       onClick={() => handleDelete(booking._id)}
-                      className="btn btn-danger"
+                      className="bk-button"
+                    >
+                      {booking.status}
+                    </button>
+                  </div>
+                  <div className="button-delete button">
+                    <button
+                      onClick={() => handleDelete(booking._id)}
+                      className="bk-button"
                     >
                       Delete
                     </button>

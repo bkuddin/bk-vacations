@@ -65,6 +65,9 @@ function App() {
             <Route path="/vacations">
               <Vacations></Vacations>
             </Route>
+            <Route path="/add-package">
+              <AddVacations></AddVacations>
+            </Route>
             <Route path="*">
               <Notfound></Notfound>
             </Route>
