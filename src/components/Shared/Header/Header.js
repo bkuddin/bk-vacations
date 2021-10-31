@@ -37,16 +37,20 @@ const Header = () => {
             </div>
             {/* dropdown */}
             <NavDropdown title="Admin" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/add-package">
-                Add New Package
+              <NavDropdown.Item as={Link} to="/add-vacations">
+                Add New Vacation
               </NavDropdown.Item>
 
+              <NavDropdown.Item as={Link} to="/manage-vacations">
+                Manage Vacations
+              </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/manage-bookings">
                 Manage Bookings
               </NavDropdown.Item>
               {/* <NavDropdown.Divider /> */}
-              <NavDropdown.Item as={Link} to="/add-vacations">
-                Add New Vacation
+
+              <NavDropdown.Item as={Link} to="/add-package">
+                Add New Package
               </NavDropdown.Item>
             </NavDropdown>
             {/* dropdown */}
