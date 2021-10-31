@@ -16,6 +16,7 @@ const Header = () => {
         expand="lg"
         bg="light"
         variant="light"
+        sticky="top"
       >
         <Container>
           <Navbar.Brand as={Link} to="/home" className="logo nav-link">
