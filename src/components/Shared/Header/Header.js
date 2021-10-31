@@ -41,9 +41,9 @@ const Header = () => {
                 Add New Vacation
               </NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to="/manage-vacations">
+              {/* <NavDropdown.Item as={Link} to="/manage-vacations">
                 Manage Vacations
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
               <NavDropdown.Item as={Link} to="/manage-bookings">
                 Manage Bookings
               </NavDropdown.Item>
