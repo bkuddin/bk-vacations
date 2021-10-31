@@ -23,13 +23,13 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Nav.Link as={Link} to="/home">
+            <Nav.Link className="nav-style" as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/trips">
+            <Nav.Link className="nav-style" as={Link} to="/trips">
               Trips
             </Nav.Link>
-            <Nav.Link as={Link} to="/my-booking">
+            <Nav.Link className="nav-style" as={Link} to="/my-booking">
               My Booking
             </Nav.Link>
 

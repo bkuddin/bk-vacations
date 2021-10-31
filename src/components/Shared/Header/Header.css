@@ -1,5 +1,5 @@
 .logo {
-  margin-left: -30%;
+  margin-left: -35%;
 }
 
 .nav-bar {
@@ -10,7 +10,12 @@
   background-color: #333;
 }
 
-Link {
+.nav-style {
+  color: #333;
+}
+
+.nav-style:hover {
+  background-color: #ffb192;
   color: white;
 }
 
