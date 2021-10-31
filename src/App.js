@@ -15,7 +15,6 @@ import Home from "./Pages/Home/Home";
 import MobileApp from "./Pages/MobileApp/MobileApp";
 import Notfound from "./Pages/Notfound/Notfound";
 import Trips from "./Pages/Trips/Trips";
-import UpdateBooking from "./Pages/UpdateBooking/UpdateBooking";
 import UserManageBooking from "./Pages/UserManageBooking/UserManageBooking";
 import Vacations from "./Pages/Vacations/Vacations";
 
