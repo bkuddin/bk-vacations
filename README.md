@@ -6,6 +6,11 @@ For nearly four months, BK Vacations has been fulfilling vacation fantasies. At 
 
 https://bk-vacations.netlify.app/
 
+## Screenshots
+
+![Screenshot](https://i.ibb.co/FH1Z3y3/BK-VACATIONS.png)
+
+
 ## Bullet points
 
 - The design principles of React.
