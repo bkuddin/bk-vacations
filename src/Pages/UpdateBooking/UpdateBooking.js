@@ -28,6 +28,7 @@ const UpdateBooking = () => {
   fetch(`https://fierce-fjord-19214.herokuapp.com/packages/${updateId}`)
     .then((res) => res.json())
     .then((data) => setBooking(data));
+
   return (
     <div className="add-vacation">
       <form onSubmit={handleSubmit(onSubmit)}>

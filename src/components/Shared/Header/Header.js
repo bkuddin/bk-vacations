@@ -36,23 +36,23 @@ const Header = () => {
               </Nav.Link>
             </div>
             {/* dropdown */}
-            <NavDropdown title="Admin" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/add-vacations">
+            {/* <NavDropdown title="Admin" id="collasible-nav-dropdown"> */}
+            {/* <NavDropdown.Item as={Link} to="/add-vacations">
                 Add New Vacation
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
 
-              {/* <NavDropdown.Item as={Link} to="/manage-vacations">
+            {/* <NavDropdown.Item as={Link} to="/manage-vacations">
                 Manage Vacations
               </NavDropdown.Item> */}
-              <NavDropdown.Item as={Link} to="/manage-bookings">
+            {/* <NavDropdown.Item as={Link} to="/manage-bookings">
                 Manage Bookings
-              </NavDropdown.Item>
-              {/* <NavDropdown.Divider /> */}
+              </NavDropdown.Item> */}
+            {/* <NavDropdown.Divider /> */}
 
-              <NavDropdown.Item as={Link} to="/add-package">
+            {/* <NavDropdown.Item as={Link} to="/add-package">
                 Add New Package
-              </NavDropdown.Item>
-            </NavDropdown>
+              </NavDropdown.Item> */}
+            {/* </NavDropdown> */}
             {/* dropdown */}
 
             {user?.email ? (
