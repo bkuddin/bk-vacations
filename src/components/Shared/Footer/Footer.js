@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Logo from "../../../images/bk-vacations-logo-black.png";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -23,17 +24,41 @@ const Footer = () => {
           </Col>
           <Col sm={3}>
             <h5>Learn about us </h5>
-            <Link to="/">About</Link> <br />
-            <Link to="/">Payment Plans</Link> <br />
-            <Link to="/">Group Vactions</Link> <br />
-            <Link to="/">Gift Cards</Link> <br />
+            <Link className="footer-link" to="/">
+              About
+            </Link>{" "}
+            <br />
+            <Link className="footer-link" to="/">
+              Payment Plans
+            </Link>{" "}
+            <br />
+            <Link className="footer-link" to="/">
+              Group Vactions
+            </Link>{" "}
+            <br />
+            <Link className="footer-link" to="/">
+              Gift Cards
+            </Link>{" "}
+            <br />
           </Col>
           <Col sm={3}>
             <h5>Let us help you</h5>
-            <Link to="/">Customer Support</Link> <br />
-            <Link to="/">Health & Sefety Measures</Link> <br />
-            <Link to="/">FAQs</Link> <br />
-            <Link to="/">Manage Your Reservation</Link> <br />
+            <Link className="footer-link" to="/">
+              Customer Support
+            </Link>{" "}
+            <br />
+            <Link className="footer-link" to="/">
+              Health & Sefety Measures
+            </Link>{" "}
+            <br />
+            <Link className="footer-link" to="/">
+              FAQs
+            </Link>{" "}
+            <br />
+            <Link className="footer-link" to="/">
+              Manage Your Reservation
+            </Link>{" "}
+            <br />
           </Col>
         </Row>
       </Container>
